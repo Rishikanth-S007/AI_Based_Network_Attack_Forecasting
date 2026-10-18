@@ -1,0 +1,10 @@
+streamlit>=1.36.0
+plotly>=5.0.0
+pandas>=2.0.0
+numpy>=1.24.0
+torch
+captum
+polars>=0.20.0
+pyvis>=0.3.2
+networkx>=3.0
+dpkt

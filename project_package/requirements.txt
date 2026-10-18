@@ -1,0 +1,10 @@
+# runtime (needed to run the Streamlit app / call inference.py)
+streamlit
+torch
+numpy
+captum
+
+# also required for PCAP upload parsing in the dashboard
+pandas
+scikit-learn
+dpkt

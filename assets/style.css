@@ -1,0 +1,248 @@
+/* Complete Streamlit Override Stylesheet - Light Theme */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --brand-blue: #2B4C7E;
+    --brand-blue-hover: #1E3A8A;
+    --border-color: #E2E8F0;
+    --text-primary: #0F172A;
+    --text-secondary: #64748B;
+}
+
+/* Force Global Light Background & Inter Font Stack */
+html, body, .stApp {
+    background-color: #F8FAFC !important;
+    color: #0F172A !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+/* Hide Default Streamlit Header Line & Deploy Button */
+header[data-testid="stHeader"] {
+    background-color: #F8FAFC !important;
+}
+
+div[data-testid="stToolbar"] {
+    display: none !important;
+}
+
+/* Sidebar Override */
+section[data-testid="stSidebar"] {
+    background-color: #F8FAFC !important;
+    border-right: 1px solid #E2E8F0 !important;
+}
+
+section[data-testid="stSidebar"] > div {
+    padding: 1.5rem 1.2rem !important;
+}
+
+section[data-testid="stSidebar"] * {
+    color: #0F172A !important;
+}
+
+/* STRICT EQUAL SIZING FOR TOP TAB BUTTONS IN BOTH ACTIVE AND INACTIVE STATES */
+div[data-testid="stSidebar"] [data-testid="column"] button,
+div[data-testid="stSidebar"] [data-testid="column"] button[kind="primary"],
+div[data-testid="stSidebar"] [data-testid="column"] button[kind="secondary"],
+button[data-testid="stBaseButton-primary"],
+button[data-testid="stBaseButton-secondary"] {
+    height: 48px !important;
+    min-height: 48px !important;
+    max-height: 48px !important;
+    line-height: 1.2 !important;
+    padding: 0 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+    border-radius: 8px !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+}
+
+/* PRIMARY ACTIVE BUTTONS (Dark Navy Blue #2B4C7E background, White text) */
+.stButton > button[kind="primary"],
+button[data-testid="stBaseButton-primary"],
+button[kind="primary"] {
+    background-color: #2B4C7E !important;
+    background: #2B4C7E !important;
+    color: #FFFFFF !important;
+    border: 1.5px solid #2B4C7E !important;
+    box-shadow: none !important;
+}
+
+.stButton > button[kind="primary"] *,
+button[data-testid="stBaseButton-primary"] *,
+button[kind="primary"] * {
+    color: #FFFFFF !important;
+}
+
+.stButton > button[kind="primary"]:hover,
+button[data-testid="stBaseButton-primary"]:hover {
+    background-color: #1E3A8A !important;
+    background: #1E3A8A !important;
+    color: #FFFFFF !important;
+    border-color: #1E3A8A !important;
+}
+
+/* SECONDARY INACTIVE BUTTONS (White background, Dark slate text & border) */
+.stButton > button[kind="secondary"],
+button[data-testid="stBaseButton-secondary"],
+button[kind="secondary"] {
+    background-color: #FFFFFF !important;
+    background: #FFFFFF !important;
+    color: #475569 !important;
+    border: 1.5px solid #CBD5E1 !important;
+    box-shadow: none !important;
+}
+
+.stButton > button[kind="secondary"] *,
+button[data-testid="stBaseButton-secondary"] *,
+button[kind="secondary"] * {
+    color: #475569 !important;
+}
+
+.stButton > button[kind="secondary"]:hover,
+button[data-testid="stBaseButton-secondary"]:hover {
+    background-color: #F1F5F9 !important;
+    background: #F1F5F9 !important;
+    color: #1E293B !important;
+    border-color: #94A3B8 !important;
+}
+
+/* RUN INFERENCE BUTTON OVERRIDE & VECTOR BAR CHART ICON */
+.run-inference-btn button,
+.run-inference-btn button * {
+    background-color: #FFFFFF !important;
+    background: #FFFFFF !important;
+    color: #2B4C7E !important;
+    border: 1.5px solid #2B4C7E !important;
+}
+
+.run-inference-btn button::before {
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-right: 8px;
+    background-color: #2B4C7E;
+    mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='18' y1='20' x2='18' y2='10'/><line x1='12' y1='20' x2='12' y2='4'/><line x1='6' y1='20' x2='6' y2='14'/></svg>") no-repeat center / contain;
+    -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='18' y1='20' x2='18' y2='10'/><line x1='12' y1='20' x2='12' y2='4'/><line x1='6' y1='20' x2='6' y2='14'/></svg>") no-repeat center / contain;
+}
+
+.run-inference-btn button:hover {
+    background-color: #F1F5F9 !important;
+    background: #F1F5F9 !important;
+    border-color: #1E3A8A !important;
+    color: #1E3A8A !important;
+}
+
+/* Streamlit File Uploader Light Theme Override */
+div[data-testid="stFileUploader"] {
+    background-color: #FFFFFF !important;
+    border: 1px dashed #CBD5E1 !important;
+    border-radius: 8px !important;
+    padding: 8px !important;
+}
+
+div[data-testid="stFileUploader"] section {
+    background-color: #F8FAFC !important;
+    color: #0F172A !important;
+    border-radius: 6px !important;
+    padding: 12px !important;
+}
+
+div[data-testid="stFileUploader"] section * {
+    color: #0F172A !important;
+    background-color: transparent !important;
+}
+
+div[data-testid="stFileUploader"] section button {
+    background-color: #FFFFFF !important;
+    color: #0F172A !important;
+    border: 1px solid #CBD5E1 !important;
+    border-radius: 6px !important;
+    height: auto !important;
+    min-height: auto !important;
+}
+
+div[data-testid="stFileUploaderDropzone"] {
+    background-color: #F8FAFC !important;
+    color: #0F172A !important;
+}
+
+div[data-testid="stFileUploaderDropzone"] * {
+    color: #0F172A !important;
+}
+
+/* Override Selectbox & Dropdowns */
+section[data-testid="stSidebar"] div[data-baseweb="select"] > div {
+    background-color: #FFFFFF !important;
+    color: #0F172A !important;
+    border: 1px solid #CBD5E1 !important;
+    border-radius: 8px !important;
+}
+
+section[data-testid="stSidebar"] div[data-baseweb="select"] * {
+    color: #0F172A !important;
+}
+
+section[data-testid="stSidebar"] div[data-baseweb="select"] svg {
+    fill: #0F172A !important;
+}
+
+div[data-baseweb="popover"] ul,
+div[data-baseweb="menu"] {
+    background-color: #FFFFFF !important;
+    color: #0F172A !important;
+    border: 1px solid #CBD5E1 !important;
+}
+
+div[data-baseweb="popover"] li,
+div[data-baseweb="menu"] [role="option"] {
+    color: #0F172A !important;
+    background-color: #FFFFFF !important;
+}
+
+div[data-baseweb="popover"] li:hover,
+div[data-baseweb="menu"] [role="option"]:hover {
+    background-color: #F1F5F9 !important;
+}
+
+/* SLIDER STYLING & HIDE STREAMLIT DUP TICK LABELS */
+div[data-testid="stSlider"] {
+    background: transparent !important;
+    padding: 0 !important;
+}
+
+div[data-testid="stSlider"] div[data-baseweb="slider"] {
+    background: transparent !important;
+}
+
+div[data-testid="stSlider"] div[role="slider"] {
+    background-color: #2B4C7E !important;
+    border: 2px solid #FFFFFF !important;
+    box-shadow: 0 0 0 2px #2B4C7E !important;
+    width: 16px !important;
+    height: 16px !important;
+}
+
+/* Hide Streamlit native unformatted min/max tick labels (0 and 100) */
+div[data-testid="stSlider"] [data-testid="stTickBar"],
+div[data-testid="stSlider"] [data-testid="stSliderTickBar"],
+div[data-testid="stSlider"] div[data-baseweb="slider"] + div {
+    display: none !important;
+}
+
+/* Remove default code block styling */
+code {
+    background-color: transparent !important;
+    color: inherit !important;
+    padding: 0 !important;
+    border: none !important;
+}

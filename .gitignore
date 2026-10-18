@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local secrets and environment files
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Local data and generated captures
+capture*.csv
+project_package/data/*.csv
+
+# Model and experiment outputs
+*.pkl
+*.pickle
+*.joblib
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
